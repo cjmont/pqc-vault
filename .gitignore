@@ -1,0 +1,21 @@
+# Rust
+/target
+**/*.rs.bk
+
+# Node
+node_modules/
+packages/*/dist/
+
+# napi build outputs (regenerated in CI / by `npm run build`)
+# NOTE: binding.js + binding.d.ts (the platform-independent loader) ARE
+# committed — they're part of the published package and needed by the TS build.
+packages/*/*.node
+packages/*/npm/*/*.node
+
+# misc
+*.log
+.DS_Store
+artifacts/
+
+# Claude Code local config (contains permission allowlist / secrets)
+.claude/

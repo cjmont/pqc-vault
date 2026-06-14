@@ -1,0 +1,31 @@
+{
+  "source": "usnistgov/ACVP-Server gen-val/json-files (internalProjection.json)",
+  "branch": "master",
+  "note": "Trimmed to ML-KEM-768 and ML-DSA-65 (external/pure). Vendored by scripts/vendor-acvp.mjs.",
+  "files": {
+    "ml-kem-768-keygen.json": {
+      "count": 25,
+      "sha256": "f863d69aee00cca6aafc7e04c4adc91ba8bca7ad0266ef5a0ffb8323c8c743ed"
+    },
+    "ml-kem-768-encap.json": {
+      "count": 25,
+      "sha256": "97e5e0e883a6d36dd1bfadfa217d55a9b5b11ec49796721cb73191933437452b"
+    },
+    "ml-kem-768-decap.json": {
+      "count": 10,
+      "sha256": "8cc7c6a9131ab8bea4b4b01fc54339321a2b3f61d0a29061cb461addf73ea3ea"
+    },
+    "ml-dsa-65-keygen.json": {
+      "count": 25,
+      "sha256": "4ed3183a9407faca1c7c9037b1b3f12e2ed3c35793ab10a0b164a2437feed875"
+    },
+    "ml-dsa-65-siggen.json": {
+      "count": 30,
+      "sha256": "68c445d7439371d99a13c7ccf2ae5405a76c09940b30b5afd2b3a7069d9ff735"
+    },
+    "ml-dsa-65-sigver.json": {
+      "count": 15,
+      "sha256": "e235939c4273a1f660c45a2e58e4f903fe6dc6d7ec1c202978fa70bb8c89a217"
+    }
+  }
+}

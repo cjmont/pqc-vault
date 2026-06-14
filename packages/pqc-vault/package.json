@@ -1,0 +1,72 @@
+{
+  "name": "pqc-vault",
+  "version": "0.1.0",
+  "description": "Hybrid post-quantum encryption (X25519 + ML-KEM-768) and signatures (ML-DSA-65) for Node.js — libsodium-style API over the formally-verified libcrux backend.",
+  "author": "carlosmontanor",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjmont/pqc-vault.git"
+  },
+  "keywords": [
+    "post-quantum",
+    "pqc",
+    "ml-kem",
+    "ml-dsa",
+    "kyber",
+    "dilithium",
+    "x25519",
+    "hybrid",
+    "encryption",
+    "libcrux",
+    "napi-rs"
+  ],
+  "type": "commonjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "binding.js",
+    "binding.d.ts"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "napi": {
+    "binaryName": "pqc-vault",
+    "packageName": "@post-quantum-cryptography/pqc-vault",
+    "targets": [
+      "x86_64-pc-windows-msvc",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-apple-darwin"
+    ]
+  },
+  "scripts": {
+    "build:rust": "napi build --release --platform --js-package-name @post-quantum-cryptography/pqc-vault --manifest-path ../../crates/pqc-vault-napi/Cargo.toml --js binding.js --dts binding.d.ts --output-dir .",
+    "build:rust:debug": "napi build --platform --js-package-name @post-quantum-cryptography/pqc-vault --manifest-path ../../crates/pqc-vault-napi/Cargo.toml --js binding.js --dts binding.d.ts --output-dir .",
+    "build:ts": "tsup",
+    "build": "npm run build:rust && npm run build:ts",
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.0.0",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "optionalDependencies": {
+    "@post-quantum-cryptography/pqc-vault-darwin-arm64": "0.1.0",
+    "@post-quantum-cryptography/pqc-vault-linux-arm64-gnu": "0.1.0",
+    "@post-quantum-cryptography/pqc-vault-linux-x64-gnu": "0.1.0",
+    "@post-quantum-cryptography/pqc-vault-win32-x64-msvc": "0.1.0"
+  }
+}

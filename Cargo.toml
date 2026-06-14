@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/pqc-vault-core",
+    "crates/pqc-vault-napi",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+authors = ["carlosmontanor"]
+repository = "https://github.com/cjmont/pqc-vault"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"

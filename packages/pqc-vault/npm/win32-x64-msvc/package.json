@@ -1,0 +1,37 @@
+{
+  "name": "@post-quantum-cryptography/pqc-vault-win32-x64-msvc",
+  "version": "0.1.0",
+  "cpu": [
+    "x64"
+  ],
+  "main": "pqc-vault.win32-x64-msvc.node",
+  "files": [
+    "pqc-vault.win32-x64-msvc.node"
+  ],
+  "description": "Hybrid post-quantum encryption (X25519 + ML-KEM-768) and signatures (ML-DSA-65) for Node.js — libsodium-style API over the formally-verified libcrux backend.",
+  "keywords": [
+    "post-quantum",
+    "pqc",
+    "ml-kem",
+    "ml-dsa",
+    "kyber",
+    "dilithium",
+    "x25519",
+    "hybrid",
+    "encryption",
+    "libcrux",
+    "napi-rs"
+  ],
+  "author": "carlosmontanor",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjmont/pqc-vault.git"
+  },
+  "os": [
+    "win32"
+  ]
+}
