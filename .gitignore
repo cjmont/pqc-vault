@@ -19,3 +19,7 @@ artifacts/
 
 # Claude Code local config (contains permission allowlist / secrets)
 .claude/
+
+# sibling projects (separate repos)
+EVM/
+LLM/

@@ -134,7 +134,14 @@ jobs:
           NPM_CONFIG_PROVENANCE: "true"
         run: |
           for dir in npm/*/; do
-            npm publish "$dir" --access public
+            name=$(node -p "require('./${dir}package.json').name")
+            ver=$(node -p "require('./${dir}package.json').version")
+            if npm view "$name@$ver" version >/dev/null 2>&1; then
+              echo "skip already-published $name@$ver"
+            else
+              npm publish "$dir" --access public
+              sleep 10
+            fi
           done
 
       - name: Publish meta package (with provenance)
@@ -142,4 +149,11 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: "true"
-        run: npm publish --access public
+        run: |
+          name=$(node -p "require('./package.json').name")
+          ver=$(node -p "require('./package.json').version")
+          if npm view "$name@$ver" version >/dev/null 2>&1; then
+            echo "skip already-published $name@$ver"
+          else
+            npm publish --access public
+          fi

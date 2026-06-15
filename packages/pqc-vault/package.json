@@ -1,6 +1,6 @@
 {
   "name": "pqc-vault",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hybrid post-quantum encryption (X25519 + ML-KEM-768) and signatures (ML-DSA-65) for Node.js — libsodium-style API over the formally-verified libcrux backend.",
   "author": "carlosmontanor",
   "license": "Apache-2.0",
@@ -64,9 +64,9 @@
     "typescript": "^5.4.0"
   },
   "optionalDependencies": {
-    "@post-quantum-cryptography/pqc-vault-darwin-arm64": "0.1.0",
-    "@post-quantum-cryptography/pqc-vault-linux-arm64-gnu": "0.1.0",
-    "@post-quantum-cryptography/pqc-vault-linux-x64-gnu": "0.1.0",
-    "@post-quantum-cryptography/pqc-vault-win32-x64-msvc": "0.1.0"
+    "@post-quantum-cryptography/pqc-vault-darwin-arm64": "0.1.1",
+    "@post-quantum-cryptography/pqc-vault-linux-arm64-gnu": "0.1.1",
+    "@post-quantum-cryptography/pqc-vault-linux-x64-gnu": "0.1.1",
+    "@post-quantum-cryptography/pqc-vault-win32-x64-msvc": "0.1.1"
   }
 }
